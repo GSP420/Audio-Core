@@ -2,7 +2,7 @@
 //        Audio Core
 //           by:
 // Erick Garcia
-// ?
+// Zachary Gauld
 // ?
 // ?
 // ?
