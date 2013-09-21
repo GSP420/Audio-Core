@@ -1,11 +1,11 @@
 // GSP 420 - Game Engine Design
-//        Audio Core
-//           by:
+// Audio Core - Main
+// by:
 // Erick Garcia
 // Zachary Gauld
 // Christopher Cone
-// ?
-// ?
+// Jordan Swanson
+// Darion Wallace
 
 #include "AudioCore.h"
 

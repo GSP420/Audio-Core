@@ -1,11 +1,11 @@
 // GSP 420 - Game Engine Design
-//        Audio Core
-//           by:
+// Audio Core - Sound Test
+// by:
 // Erick Garcia
 // Zachary Gauld
 // Christopher Cone
-// ?
-// ?
+// Jordan Swanson
+// Darion Wallace
 
 #include "AudioCore.h"
 #include <Windows.h>
@@ -19,7 +19,7 @@ void main ()
 	Sound :: Load ("Music.mp3");
 	Sound :: Play (false);
 
-	// m_sound_effect = new SoundEffect ("Your Filename"); ((Trying to get this to work))
+	//m_sound_effect = new SoundEffect ("Your Filename"); // ((Trying to get this to work))
 
 	bool quit = false;
 
