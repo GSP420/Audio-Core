@@ -9,19 +9,22 @@
 
 #include "AudioCore.h"
 
-bool Sound :: s_enabled = true;
-char *Sound :: s_current_sound;
+bool Sound :: s_enabled = true; //Is the sound enabled?
+char *Sound :: s_current_sound; //current sound to play
 
+//FMOD system declarations
 FMOD_RESULT Sound :: s_result;
 FMOD_SYSTEM *Sound :: s_fmod_system;
 FMOD_SOUND *Sound :: s_sound;
 FMOD_CHANNEL *Sound :: s_channel;
 
+
 void Sound :: Initialize ()
 {
 	s_result = FMOD_System_Create (&s_fmod_system);
 	assert (s_result == FMOD_OK);
-	s_result = FMOD_System_Init (s_fmod_system, 1, FMOD_INIT_NORMAL, 0);
+	//initialize the system with 1 channel
+	s_result = FMOD_System_Init (s_fmod_system, 2, FMOD_INIT_NORMAL, 0);
 	assert (s_result == FMOD_OK);
 	FMOD_Channel_SetVolume (s_channel, 0.0f);
 }
@@ -39,6 +42,7 @@ void Sound :: SetVolume (float vol)
     }
 }
 
+//load sound file
 void Sound :: Load (const char * filename) 
 {
 	s_current_sound = (char *) filename;
@@ -57,7 +61,7 @@ void Sound :: Unload (void)
 	assert (s_result == FMOD_OK);
 }
 
-void Sound :: Play (bool pause = false)
+void Sound :: Play (bool pause = false) //no augment is needed to play by default
 {
 	if (true == s_enabled) 
 	{
@@ -72,21 +76,25 @@ bool Sound :: GetSoundState ()
     return s_enabled;
 }
 
+//gets the name of the current sound
 char* Sound :: GetCurrentSound ()
 {
 	return s_current_sound;
 }
 
+//pause or unpause the sound
 void Sound :: SetPause (bool pause) 
 {
 	FMOD_Channel_SetPaused (s_channel, pause);
 }
 
+//turn sound on or off
 void Sound :: SetSound (bool s) 
 {
     s_enabled = s;
 }
 
+//toggles sound on and off
 void Sound :: ToggleSound (void) 
 {
 	s_enabled = !s_enabled;
@@ -102,6 +110,7 @@ void Sound :: ToggleSound (void)
 	}
 }
 
+//toggle pause on and off
 void Sound :: TogglePause (void) 
 {
 	FMOD_BOOL p;
@@ -109,6 +118,9 @@ void Sound :: TogglePause (void)
     FMOD_Channel_SetPaused (s_channel, !p);
 }
 
+//===========================================================================
+//Sound Effects
+//===========================================================================
 SoundEffect :: SoundEffect (char* filename)
 {
 	b_enabled = true;
@@ -123,6 +135,7 @@ void SoundEffect :: Play ()
 	assert(m_result == FMOD_OK);
 }
 
+//Gets the sound system
 FMOD_SYSTEM* Sound :: GetSystem ()
 {
  return s_fmod_system;
