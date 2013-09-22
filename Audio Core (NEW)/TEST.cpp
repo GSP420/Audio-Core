@@ -22,9 +22,12 @@ void main ()
 	Sound :: Play ("Music.mp3");
 	Sound :: Play (false);
 
-	//SoundEffect
-	SoundEffect* m_sound_effect;
-	m_sound_effect = new SoundEffect ("Jump.wav");
+	//Sound Effects
+	SoundEffect* Jump_Sound;
+	//SoundEffect* Attack_Sound;
+
+	Jump_Sound = new SoundEffect ("Jump.wav");
+	//Attack_Sound = new SoundEffect ("Attack.wav");
 
 	bool quit = false;
 
@@ -40,7 +43,7 @@ void main ()
 		}
 		if (GetAsyncKeyState (VK_SPACE))
 		{
-			m_sound_effect->Play();
+			Jump_Sound->Play();
 		}
 		if (GetAsyncKeyState ('P'))
 		{
