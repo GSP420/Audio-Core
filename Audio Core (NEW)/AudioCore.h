@@ -11,6 +11,7 @@
 #define AUDIOCORE_H
 #include "fmod.h"
 #include "assert.h"
+#include "fmod_errors.h"
 
 class Sound
 {
@@ -58,7 +59,7 @@ private:
 	bool b_enabled;
 	char* m_sound_name;
 
-	//FMOD system seclarations
+	//FMOD system declarations
 	FMOD_SOUND* m_sound;
 	FMOD_RESULT m_result;
 
