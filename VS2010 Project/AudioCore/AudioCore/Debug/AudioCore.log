@@ -1,27 +1,21 @@
-﻿Build started 9/22/2013 1:14:20 PM.
+﻿Build started 9/29/2013 7:22:06 PM.
      1>Project "C:\Users\e\Documents\GitHub\Audio-Core\VS2010 Project\AudioCore\AudioCore\AudioCore.vcxproj" on node 2 (build target(s)).
-     1>PrepareForBuild:
-         Creating directory "C:\Users\e\Documents\GitHub\Audio-Core\VS2010 Project\AudioCore\Debug\".
-       InitializeBuildStatus:
+     1>InitializeBuildStatus:
          Creating "Debug\AudioCore.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AudioCore.cpp TEST.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt TEST.cpp
          TEST.cpp
-         AudioCore.cpp
-         Generating Code...
        ManifestResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\AudioCore.exe.embed.manifest.res" Debug\AudioCore_manifest.rc 
+         All outputs are up-to-date.
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\e\Documents\GitHub\Audio-Core\VS2010 Project\AudioCore\Debug\AudioCore.exe" /INCREMENTAL /NOLOGO fmodex_vc.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AudioCore.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\e\Documents\GitHub\Audio-Core\VS2010 Project\AudioCore\Debug\AudioCore.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\e\Documents\GitHub\Audio-Core\VS2010 Project\AudioCore\Debug\AudioCore.lib" /MACHINE:X86 Debug\AudioCore.exe.embed.manifest.res
          Debug\AudioCore.obj
          Debug\TEST.obj
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\AudioCore.exe.embed.manifest" /manifest Debug\AudioCore.exe.intermediate.manifest
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\AudioCore.exe.embed.manifest.res" Debug\AudioCore_manifest.rc 
+         All outputs are up-to-date.
        LinkEmbedManifest:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\e\Documents\GitHub\Audio-Core\VS2010 Project\AudioCore\Debug\AudioCore.exe" /INCREMENTAL /NOLOGO fmodex_vc.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AudioCore.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\e\Documents\GitHub\Audio-Core\VS2010 Project\AudioCore\Debug\AudioCore.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\e\Documents\GitHub\Audio-Core\VS2010 Project\AudioCore\Debug\AudioCore.lib" /MACHINE:X86 Debug\AudioCore.exe.embed.manifest.res
-         Debug\AudioCore.obj
-         Debug\TEST.obj
+         All outputs are up-to-date.
          AudioCore.vcxproj -> C:\Users\e\Documents\GitHub\Audio-Core\VS2010 Project\AudioCore\Debug\AudioCore.exe
        PostBuildEvent:
          copy /y “C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\fmodex.dll” “C:\Users\e\Documents\GitHub\Audio-Core\VS2010 Project\AudioCore\Debug\”
@@ -34,4 +28,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.82
+Time Elapsed 00:00:03.10
