@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{90671A77-EFF1-477E-B411-F9B7DF68339E}</ProjectGuid>
+    <ProjectGuid>{2F0C73D0-6665-417C-B200-5A771A548528}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AudioCore</RootNamespace>
   </PropertyGroup>
@@ -59,7 +59,8 @@
       <AdditionalDependencies>fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy /y “C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\fmodex.dll” “$(OutputPath)”</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -85,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AudioCore.h" />
+    <ClInclude Include="ICore.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

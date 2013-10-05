@@ -15,17 +15,20 @@ using namespace std;
 
 void main ()
 {
-	Sound :: Initialize ();
+	//AudioCore - Object Declarations
+	Sound *AudioCore = new Sound();  //instance class object
+	SoundEffect *Jump_Sound;
 
+	AudioCore->Startup(); //FMOD initiation
+	
 	//Background Music
-	Sound :: Load ("Music.mp3");
-	Sound :: Play ("Music.mp3");
-	Sound :: Play (false);
+	AudioCore->Load("Music.mp3");
+	AudioCore->Play("Music.mp3");
+	AudioCore->Play(false);
 
 	//Sound Effects
-	SoundEffect* Jump_Sound;
-
 	Jump_Sound = new SoundEffect ("Jump.wav");
+
 
 	bool quit = false;
 
@@ -50,18 +53,18 @@ void main ()
 		}
 		if (GetAsyncKeyState ('P'))
 		{
-			Sound::TogglePause();
+			AudioCore->TogglePause();
 		}
 		if (GetAsyncKeyState ('X'))
 		{
 			volume += 0.10f;
-			Sound :: SetVolume (volume);
+			AudioCore->SetVolume(volume);
 
 		}
 		if (GetAsyncKeyState ('Z'))
 		{
 			volume -= 0.10f;
-			Sound :: SetVolume (volume);
+			AudioCore->SetVolume(volume);
 
 		}
 	}
