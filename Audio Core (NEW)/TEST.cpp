@@ -15,17 +15,25 @@ using namespace std;
 
 void main ()
 {
-	Sound :: Initialize ();
+	//AudioCore - Object Declarations
+	Sound *AudioCore = new Sound();  //instance sound class object
+	ICore *ICore = new Sound(); //instance interface class object
 
+	//AudioCore - Sound Effect Declarations
+	SoundEffect *Jump_Sound; //sound effect variable names
+	
+	
+	ICore->Startup(); //FMOD initiation
+	
+	
 	//Background Music
-	Sound :: Load ("Music.mp3");
-	Sound :: Play ("Music.mp3");
-	Sound :: Play (false);
+	AudioCore->Load("Music.mp3");
+	AudioCore->Play("Music.mp3");
+	AudioCore->Play(false);
 
 	//Sound Effects
-	SoundEffect* Jump_Sound;
-
 	Jump_Sound = new SoundEffect ("Jump.wav");
+
 
 	bool quit = false;
 
@@ -35,7 +43,7 @@ void main ()
 	cout << "TEST. Press Z to decrease the volume of the music.\n" << endl;
 	cout << "TEST. Press X to increase the volume of the music.\n" << endl;
 
-	float volume= 1.00f;
+	float Volume = 1.00f;
 
 	while (!quit)
 	{
@@ -50,18 +58,18 @@ void main ()
 		}
 		if (GetAsyncKeyState ('P'))
 		{
-			Sound::TogglePause();
+			AudioCore->TogglePause();
 		}
 		if (GetAsyncKeyState ('X'))
 		{
-			volume += 0.10f;
-			Sound :: SetVolume (volume);
+			Volume += 0.10f;
+			AudioCore->SetVolume(Volume);
 
 		}
 		if (GetAsyncKeyState ('Z'))
 		{
-			volume -= 0.10f;
-			Sound :: SetVolume (volume);
+			Volume -= 0.10f;
+			AudioCore->SetVolume(Volume);
 
 		}
 	}

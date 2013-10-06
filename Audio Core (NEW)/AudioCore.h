@@ -7,13 +7,14 @@
 // Jordan Swanson
 // Darion Wallace
 
-#ifndef AUDIOCORE_H
-#define AUDIOCORE_H
-#include "fmod.h"
+#include "fmod.hpp"
 #include "assert.h"
 #include "fmod_errors.h"
+#include "ICore.h"
 
-class Sound
+using namespace std;
+
+class Sound : public ICore
 {
 private:
 	static bool s_enabled;						//is the sound enabled?
@@ -21,14 +22,16 @@ private:
 
 	//FMOD system declarations
 	static FMOD_RESULT s_result;
-	static FMOD_SYSTEM *s_fmod_system;
 	static FMOD_SOUND *s_sound;
 	static FMOD_CHANNEL *s_channel;
+	static FMOD_SYSTEM *s_fmod_system;
 
 
 public:
-	static void Initialize ();
-	static void Update ();
+
+	void Startup ();
+	void Update ();
+	void Shutdown ();
 
 	//FMOD system declarations
 	static FMOD_SYSTEM* GetSystem ();
@@ -67,5 +70,3 @@ public:
 	SoundEffect (char* filename);
 	void Play ();
 };
-
-#endif

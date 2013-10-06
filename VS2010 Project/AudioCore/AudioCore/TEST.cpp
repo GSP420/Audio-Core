@@ -16,10 +16,15 @@ using namespace std;
 void main ()
 {
 	//AudioCore - Object Declarations
-	Sound *AudioCore = new Sound();  //instance class object
-	SoundEffect *Jump_Sound;
+	Sound *AudioCore = new Sound();  //instance sound class object
+	ICore *ICore = new Sound(); //instance interface class object
 
-	AudioCore->Startup(); //FMOD initiation
+	//AudioCore - Sound Effect Declarations
+	SoundEffect *Jump_Sound; //sound effect variable names
+	
+	
+	ICore->Startup(); //FMOD initiation
+	
 	
 	//Background Music
 	AudioCore->Load("Music.mp3");
@@ -38,7 +43,7 @@ void main ()
 	cout << "TEST. Press Z to decrease the volume of the music.\n" << endl;
 	cout << "TEST. Press X to increase the volume of the music.\n" << endl;
 
-	float volume= 1.00f;
+	float Volume = 1.00f;
 
 	while (!quit)
 	{
@@ -57,14 +62,14 @@ void main ()
 		}
 		if (GetAsyncKeyState ('X'))
 		{
-			volume += 0.10f;
-			AudioCore->SetVolume(volume);
+			Volume += 0.10f;
+			AudioCore->SetVolume(Volume);
 
 		}
 		if (GetAsyncKeyState ('Z'))
 		{
-			volume -= 0.10f;
-			AudioCore->SetVolume(volume);
+			Volume -= 0.10f;
+			AudioCore->SetVolume(Volume);
 
 		}
 	}

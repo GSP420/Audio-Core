@@ -7,6 +7,7 @@
 // Jordan Swanson
 // Darion Wallace
 
+#include <fmod.hpp>
 #include "AudioCore.h"
 #include <iostream>
 
@@ -31,12 +32,12 @@ FMOD_SOUND *Sound :: s_sound;
 FMOD_CHANNEL *Sound :: s_channel;
 FMOD_RESULT result;
 
-void Sound :: Initialize ()
+void Sound :: Startup ()
 {
-	s_result = FMOD_System_Create (&s_fmod_system);
+	s_result = FMOD_System_Create(&s_fmod_system);
 	assert (s_result == FMOD_OK);
-	//initialize the system with 8 channels
-	s_result = FMOD_System_Init (s_fmod_system, 8, FMOD_INIT_NORMAL, 0);
+	//initialize the system with 8 
+	s_result = FMOD_System_Init(s_fmod_system, 8, FMOD_INIT_NORMAL, 0);
 	assert (s_result == FMOD_OK);
 	FMOD_Channel_SetVolume (s_channel, 0.0f);
 
@@ -153,6 +154,15 @@ void Sound :: TogglePause (void)
 
 	FMODErrorCheck (result);
 }
+
+
+void Sound :: Shutdown()
+{
+
+	FMOD_System_Release (s_fmod_system);
+
+}
+
 
 //===========================================================================
 //Sound Effects
