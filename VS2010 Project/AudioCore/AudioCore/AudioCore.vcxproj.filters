@@ -26,8 +26,5 @@
     <ClInclude Include="AudioCore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ICore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

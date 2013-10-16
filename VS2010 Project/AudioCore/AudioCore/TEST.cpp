@@ -17,13 +17,12 @@ void main ()
 {
 	//AudioCore - Object Declarations
 	Sound *AudioCore = new Sound();  //instance sound class object
-	ICore *ICore = new Sound(); //instance interface class object
 
 	//AudioCore - Sound Effect Declarations
 	SoundEffect *Jump_Sound; //sound effect variable names
 	
 	
-	ICore->Startup(); //FMOD initiation
+	AudioCore->Startup(); //FMOD initiation
 	
 	
 	//Background Music

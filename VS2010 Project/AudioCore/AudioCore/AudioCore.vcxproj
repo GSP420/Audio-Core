@@ -39,8 +39,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\lowlevel\inc;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\lowlevel\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -56,7 +56,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>fmod_vc.lib;fmod.dll;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -86,7 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AudioCore.h" />
-    <ClInclude Include="ICore.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
