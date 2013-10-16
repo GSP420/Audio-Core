@@ -87,7 +87,7 @@ void Sound :: Play (bool pause = false) //no augment is needed to play by defaul
 {
 	if (true == s_enabled) 
 	{
-		s_result = FMOD_System_PlaySound (s_fmod_system, FMOD_CHANNEL_FREE, s_sound, pause, &s_channel);
+		s_result = FMOD_System_PlaySound (s_fmod_system, s_sound, NULL, pause, &s_channel);
 		assert (s_result == FMOD_OK);
         FMOD_Channel_SetMode (s_channel, FMOD_LOOP_NORMAL);
     }
