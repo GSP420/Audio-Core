@@ -176,7 +176,7 @@ SoundEffect :: SoundEffect (char* filename)
 
 void SoundEffect :: Play ()
 {
-	m_result = FMOD_System_PlaySound (Sound :: GetSystem (), FMOD_CHANNEL_FREE, m_sound, false, 0);
+	m_result = FMOD_System_PlaySound (Sound :: GetSystem (), m_sound, NULL, false, 0);
 	assert(m_result == FMOD_OK);
 
 	FMODErrorCheck (result);
